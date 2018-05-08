@@ -42,7 +42,7 @@ const expected = [
   `</svg>);` +
   `}\n` +
 
-  `export default Svg;`,
+  `export default Svg;`
 ];
 
 module.exports = (actual) => {
