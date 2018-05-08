@@ -3,8 +3,7 @@ const svgToJsx = require('svg-to-jsx');
 
 function toUpperCamelCase(string) {
   return string.split(/[^a-zA-Z]+/).map(word =>
-    word && word[0].toUpperCase() + word.slice(1)
-  ).join('');
+    word && word[0].toUpperCase() + word.slice(1)).join('');
 }
 
 module.exports = function loader(content) {
@@ -20,7 +19,8 @@ module.exports = function loader(content) {
       return;
     }
 
-    callback(null,
+    callback(
+      null,
       `import React from 'react';\n` +
 
       `function ${componentName}(props) {` +
