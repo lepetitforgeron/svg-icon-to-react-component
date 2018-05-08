@@ -22,11 +22,15 @@ module.exports = function loader(content) {
     callback(
       null,
       `import React from 'react';\n` +
-
-      `function ${componentName}(props) {` +
-      `  return (${jsx.replace(/(<svg[^>]*)(>)/i, '$1 {...props}$2')});` +
+      `\n` +
+      `class ${componentName} extends React.PureComponent {\n` +
+      `  render() {\n` +
+      `    return (\n${jsx.replace(/(<svg[^>]*)(>)/i, '      $1 {...this.props}$2')
+        .replace(/\t<path/i, '        <path')
+        .replace(/<\/svg>/i, '      </svg>')}\n    );\n` +
+      `  }\n` +
       `}\n` +
-
+      `\n` +
       `export default ${componentName};`
     );
   });

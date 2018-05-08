@@ -26,7 +26,7 @@ const webpackConfig = {
       },
       {
         test: /\.svg$/i,
-        loader: path.resolve(__dirname, './svg-to-jsx-loader-spec.js')
+        loader: path.resolve(__dirname, './svg-icon-to-react-component-loader-spec.js')
       },
       {
         test: /\.svg$/i,
