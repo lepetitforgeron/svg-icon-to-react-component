@@ -1,12 +1,12 @@
 {
-  "name": "svg-to-jsx-loader",
-  "version": "2.0.1",
-  "description": "SVG to JSX loader module for webpack",
-  "author": "Vladimir Kutepov",
+  "name": "svg-icon-to-react-component-loader",
+  "version": "0.1.0",
+  "description": "SVG to React Component loader module for webpack",
+  "author": "Arne Kleinschmidt",
   "license": "MIT",
-  "homepage": "https://github.com/frenzzy/svg-to-jsx-loader#readme",
+  "homepage": "https://github.com/lepetitforgeron/svg-icon-to-react-component-loader",
   "main": "index.js",
-  "repository": "frenzzy/svg-to-jsx-loader",
+  "repository": "lepetitforgeron/svg-icon-to-react-component-loader",
   "files": [
     "index.js"
   ],

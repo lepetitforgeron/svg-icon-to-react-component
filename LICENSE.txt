@@ -1,6 +1,10 @@
 The MIT License (MIT)
 
-Copyright (c) 2015-present Vladimir Kutepov
+Copyright for portions of svg-icon-to-react-component-loader are held by Vladimir Kutepov,
+2015-present as part of svg-to-jsx-loader. 
+
+All other copyright for svg-icon-to-react-component-loader are held by Arne Kleinschmidt,
+2018-present.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
