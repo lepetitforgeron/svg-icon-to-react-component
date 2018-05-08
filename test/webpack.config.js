@@ -6,12 +6,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const webpackConfig = {
 
   entry: {
-    app: './test/app.js',
+    app: './test/app.js'
   },
 
   output: {
     path: path.resolve(__dirname, '../build'),
-    filename: '[name].[chunkhash].js',
+    filename: '[name].[chunkhash].js'
   },
 
   module: {
@@ -21,25 +21,25 @@ const webpackConfig = {
         loader: 'babel-loader',
         include: __dirname,
         query: {
-          presets: ['react'],
-        },
+          presets: ['react']
+        }
       },
       {
         test: /\.svg$/i,
-        loader: path.resolve(__dirname, './svg-to-jsx-loader-spec.js'),
+        loader: path.resolve(__dirname, './svg-to-jsx-loader-spec.js')
       },
       {
         test: /\.svg$/i,
-        loader: path.resolve(__dirname, '../index.js'),
-      },
-    ],
+        loader: path.resolve(__dirname, '../index.js')
+      }
+    ]
   },
 
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: path.join(__dirname, './app.html'),
-    }),
+      template: path.join(__dirname, './app.html')
+    })
   ],
 
   stats: {
@@ -51,8 +51,8 @@ const webpackConfig = {
     chunks: false,
     chunkModules: false,
     cached: false,
-    cachedAssets: false,
-  },
+    cachedAssets: false
+  }
 
 };
 
