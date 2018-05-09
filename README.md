@@ -1,19 +1,14 @@
 # svg-icon-to-react-component-loader
 
-[Webpack](https://webpack.js.org/) loader that allows to load SVG files as [stateless functional](https://facebook.github.io/react/blog/2015/10/07/react-v0.14.html#stateless-functional-components) [React](http://facebook.github.io/react/) components with [svg-to-jsx](https://github.com/janjakubnanista/svg-to-jsx).
-
-<!-- [![NPM version](http://img.shields.io/npm/v/svg-icon-to-react-component-loader.svg?style=flat-square)](https://www.npmjs.com/package/svg-icon-to-react-component-loader)
-[![NPM downloads](http://img.shields.io/npm/dm/svg-icon-to-react-component-loader.svg?style=flat-square)](https://www.npmjs.com/package/svg-icon-to-react-component-loader)
-[![Build Status](http://img.shields.io/travis/frenzzy/svg-icon-to-react-component-loader/master.svg?style=flat-square)](https://travis-ci.org/frenzzy/svg-icon-to-react-component-loader)
-[![Coverage Status](https://img.shields.io/coveralls/frenzzy/svg-icon-to-react-component-loader.svg?style=flat-square)](https://coveralls.io/github/frenzzy/svg-icon-to-react-component-loader)
-[![Dependency Status](http://img.shields.io/david/frenzzy/svg-icon-to-react-component-loader.svg?style=flat-square)](https://david-dm.org/frenzzy/svg-icon-to-react-component-loader) -->
+[Webpack](https://webpack.js.org/) loader that allows to load SVG files as [React](http://facebook.github.io/react/) 
+[Pure Component](https://reactjs.org/docs/react-api.html#reactpurecomponent) with [svg-to-jsx](https://github.com/janjakubnanista/svg-to-jsx).
 
 ## Installation
 
 Using [npm](https://www.npmjs.com/):
 
 ```shell
-$ npm install svg-icon-to-react-component-loader --save-dev
+$ npm install --save-dev svg-icon-to-react-component-loader 
 ```
 
 ## Usage
@@ -68,21 +63,22 @@ rules: [
 ```js
 import React from 'react';
 
-function ForwardIcon(props) {
-  return (
-    <svg height="24" width="24" version="1.1" viewBox="0 0 24 24" {...props}>
-      <path d="M21 11l-7-7v4C7 9 4 14 3 19c2.5-3.5 6-5.1 11-5.1V18l7-7z"/>
-    </svg>
-  );
+class ForwardIcon extends React.PureComponent {
+  render() {
+    return (
+      <svg height="24" width="24" version="1.1" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" {...this.props}>
+        <path d="M21 11l-7-7v4C7 9 4 14 3 19c2.5-3.5 6-5.1 11-5.1V18l7-7z"/>
+      </svg>
+    );
+  }
 }
 
-export default ForwardIcon;
+export default ForwardIcon;`
 ```
 
 ## Inspiration
 
-- [svg-jsx-loader](https://github.com/janjakubnanista/svg-jsx-loader)
-- [react-svg-loader](https://github.com/boopathi/react-svg-loader)
+- [svg-to-jsx-loader](https://github.com/frenzzy/svg-to-jsx-loader)
 - [svg-to-jsx](https://github.com/janjakubnanista/svg-to-jsx)
 
 ## License
