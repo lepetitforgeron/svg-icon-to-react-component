@@ -1,6 +1,6 @@
 {
   "name": "svg-icon-to-react-component-loader",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "SVG to React Component loader module for webpack",
   "author": "Arne Kleinschmidt",
   "license": "MIT",
