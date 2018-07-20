@@ -69,7 +69,7 @@ const ForwardIcon = props => (
   </svg>
 );
 
-export default ForwardIcon;`
+export default ForwardIcon;
 ```
 
 ## License
