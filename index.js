@@ -23,13 +23,11 @@ module.exports = function loader(content) {
       null,
       `import React from 'react';\n` +
       `\n` +
-      `class ${componentName} extends React.PureComponent {\n` +
-      `  render() {\n` +
-      `    return (\n${jsx.replace(/(<svg[^>]*)(>)/i, '      $1 {...this.props}$2')
-        .replace(/\t<path/i, '        <path')
-        .replace(/<\/svg>/i, '      </svg>')}\n    );\n` +
-      `  }\n` +
-      `}\n` +
+      `const ${componentName} = props => (\n` +
+      `${jsx.replace(/(<svg[^>]*)(>)/i, '  $1 {...props}$2')
+        .replace(/\t<path/i, '    <path')
+        .replace(/<\/svg>/i, '  </svg>')}\n` +
+      `);\n` +
       `\n` +
       `export default ${componentName};`
     );
